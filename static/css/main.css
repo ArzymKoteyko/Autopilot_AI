@@ -1,44 +1,60 @@
-*{
-    border: 3px;
-    /*border-style: dotted;*/
-}
-
 html{
     font-family: verdana;
 }
 
 a {
     text-decoration: none;
+    position: relative;
+    font-family: verdana;
+    font-size: 20px;   
 }
 
-.menu{
-    width: 100%;
-    height: 100px;
+/* Top menu logic*/
+.topmenu {
     display: flex;
     justify-content: right;
 }
-
-.menu_item {
-    width: 180px;
-    height: 60px;
-    padding: 30px;
+.topmenu > li {
+    display: inline-block;
+    position: relative;
     background-color: rgba(135, 195, 241, 0.66);
-    font-size: 25px;    
+    height: 65px;
+    width: 176px;
+}
+.topmenu > li:hover {
+    animation: 0.25s ease-in button_hover;
+    background-color: rgba(135, 195, 241, 0.96);
+}
+.topmenu > li > div {
+    margin: 20px; 
 }
 
-.menu_item:hover {
-    width: 180px;
-    height: 60px;
-    padding: 30px;
-    /*animation-name: button_hover;*/
-    animation: ease-out 0.2s button_hover;
-    background-color: rgba(135, 195, 241, 0.86); 
-    font-size: 25px; 
+/* Sub menu logic*/
+.submenu {
+    margin: 20px -60px;
 }
+.submenu > li {
+    visibility: hidden;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(135, 195, 241, 0.66);
+    height: 40px;
+    width: 176px;   
+}
+.submenu > li:hover {
+    animation: 0.25s ease-in button_hover;
+    background-color: rgba(135, 195, 241, 0.96);
+}
+.topmenu > li:hover .submenu > li {
+    visibility: visible;
+}
+
+
 
 @keyframes button_hover {
     from {background-color: rgba(135, 195, 241, 0.66)}
-    to {background-color: rgba(135, 195, 241, 0.86)}
+    to {background-color: rgba(135, 195, 241, 0.96)}
 }
 
 .text {
