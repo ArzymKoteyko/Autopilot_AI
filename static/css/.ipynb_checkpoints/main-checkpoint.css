@@ -1,10 +1,30 @@
+*{
+    border: 3px;
+    /*border-style: dotted;*/
+}
+
 html{
     font-family: verdana;
 }
 
+a {
+    text-decoration: none;
+}
+
 .menu{
     width: 100%;
-    height: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+}
+
+.menu_item{
+    width: 180px;
+    height: 60px;
+    padding: 30px;
+    background-color: rgba(135, 195, 241, 0.66);
+    font-size: 25px;
+    
 }
 
 .text {

@@ -21,9 +21,9 @@ def dated_url_for(endpoint, **values):
 def hello():
     return render_template('index.html')
 
-@app.route('/About_us')
+@app.route('/About')
 def about_us():
-    return render_template('About_us.html')
+    return render_template('About.html')
 
 @app.route('/FAQ')
 def faq():
