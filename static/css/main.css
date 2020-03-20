@@ -18,13 +18,27 @@ a {
     justify-content: right;
 }
 
-.menu_item{
+.menu_item {
     width: 180px;
     height: 60px;
     padding: 30px;
     background-color: rgba(135, 195, 241, 0.66);
-    font-size: 25px;
-    
+    font-size: 25px;    
+}
+
+.menu_item:hover {
+    width: 180px;
+    height: 60px;
+    padding: 30px;
+    /*animation-name: button_hover;*/
+    animation: ease-out 0.2s button_hover;
+    background-color: rgba(135, 195, 241, 0.86); 
+    font-size: 25px; 
+}
+
+@keyframes button_hover {
+    from {background-color: rgba(135, 195, 241, 0.66)}
+    to {background-color: rgba(135, 195, 241, 0.86)}
 }
 
 .text {
