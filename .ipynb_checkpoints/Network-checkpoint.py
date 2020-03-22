@@ -5,6 +5,10 @@ import os
 
 app = Flask(__name__)
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html')
+
 @app.context_processor
 def override_url_for():
     return dict(url_for=dated_url_for)
@@ -29,4 +33,4 @@ def about_us():
 def faq():
     return render_template('FAQ.html')
 
-#app.run()
+app.run(host = '0.0.0.0')
