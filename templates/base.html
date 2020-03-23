@@ -4,7 +4,21 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <menu>
+    <ul class = "topmenu">
+        <li><div><a href="/">Home</a></div></li>
+        <li><div><a href="/About">About</a></div></li>
+        <li><div><a href="">GitHub</a>
+            <ul class = "submenu">
+                <li><div><a href = "/">1</a></div></li>
+                <li><div><a href = "/">2</a></div></li>
+                <li><div><a href = "/">3</a></div></li>
+            </ul>
+            </div>
+        </li>
+        <li><div><a href="/">Contacts</a></div></li>
+    </ul>
+    </menu>
         <div class = "text">
             Hello World!
         </div>
