@@ -1,0 +1,67 @@
+html{
+    font-family: verdana;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    font-family: verdana;
+    font-size: 20px;   
+}
+
+/* Top menu logic*/
+.topmenu {
+    display: flex;
+    justify-content: right;
+}
+.topmenu > li {
+    display: inline-block;
+    position: relative;
+    background-color: rgba(135, 195, 241, 0.66);
+    height: 65px;
+    width: 176px;
+}
+.topmenu > li:hover {
+    animation: 0.25s ease-in button_hover;
+    background-color: rgba(135, 195, 241, 0.96);
+}
+.topmenu > li > div {
+    margin: 20px; 
+}
+
+/* Sub menu logic*/
+.submenu {
+    margin: 20px -60px;
+}
+.submenu > li {
+    visibility: hidden;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    background-color: rgba(135, 195, 241, 0.66);
+    height: 40px;
+    width: 176px;   
+}
+.submenu > li:hover {
+    animation: 0.25s ease-in button_hover;
+    background-color: rgba(135, 195, 241, 0.96);
+}
+.topmenu > li:hover .submenu > li {
+    visibility: visible;
+}
+
+
+
+@keyframes button_hover {
+    from {background-color: rgba(135, 195, 241, 0.66)}
+    to {background-color: rgba(135, 195, 241, 0.96)}
+}
+
+.text {
+    font-family: verdana;
+    font-size: 20px;
+    margin: 100px;
+    width: 200;
+    height: 200;
+    padding: 100px;
+} 
